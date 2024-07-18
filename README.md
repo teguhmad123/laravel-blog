@@ -4,6 +4,10 @@ https://www.youtube.com/playlist?list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr
 install Node.js
 install composer
 
+run using 
+    php artisan serve
+    npm run dev
+
 using tailwind
     install guide
         npm install -D tailwindcss postcss autoprefixer
