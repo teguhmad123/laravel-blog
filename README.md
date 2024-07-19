@@ -13,3 +13,8 @@ using tailwind
         npm install -D tailwindcss postcss autoprefixer
         npx tailwindcss init -p
     or follow https://tailwindcss.com/docs/guides/laravel
+
+<!-- ////////////////////////////////////////////////////////////////////////// -->
+make component using `php artisan make:component <NameComponent>` add `--view` when want make without class/controller
+
+if add or edit some npm package, run `npm run build`
