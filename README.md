@@ -1,6 +1,8 @@
 follow WPU laravel 11
 https://www.youtube.com/playlist?list=PLFIM0718LjIW1Xb7cVj7LdAr32ATDQMdr
 
+![extensions-vscode](./public/img/extensions-vscode.png)
+
 install Node.js
 install composer
 
