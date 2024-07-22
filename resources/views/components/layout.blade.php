@@ -7,9 +7,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body {
-            background-image: url("img/revenge.jpg");
+            background-image: url("{{ url('img/revenge.jpg') }}");
             background-position: top;
-            text-align: center;
+            /* text-align: center; */
         }
 
         @media screen and (max-width: 600px) {

@@ -1,6 +1,6 @@
 @props(['add_class' => ''])
 
-@php $active = request()->is($attributes['href']=='/' ? '/' : substr($attributes['href'], 1, strlen($attributes['href']))) @endphp
+@php $active = request()->is($attributes['href']=='/' ? '/' : substr($attributes['href'], 1, strlen($attributes['href'])) . "*") @endphp
 <a 
 {{ $attributes; }} 
 class="
