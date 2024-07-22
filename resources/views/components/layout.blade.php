@@ -6,16 +6,20 @@
     <title>{{ $title }}</title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        body {
+        #backgroundImage {
+            position: fixed;
+            width:100%;
+            height: 100%;
+            z-index: -1;
             background-image: url("{{ url('img/revenge.jpg') }}");
             background-position: top;
             /* text-align: center; */
         }
 
         @media screen and (max-width: 600px) {
-            body {
+            #backgroundImage {
                 background-size: cover;
-                background-repeat: no-repeat;
+                /* background-repeat: no-repeat; */
                 background-color: rgba(129, 120, 103, 1);
             }
         }
@@ -24,6 +28,7 @@
 </head>
 
 <body class="h-full">
+  <div id="backgroundImage"></div>
   <div class="min-h-full">
     <x-nav-bar/>
     <x-header :header=$header/>

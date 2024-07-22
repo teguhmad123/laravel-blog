@@ -20,3 +20,11 @@ using tailwind
 make component using `php artisan make:component <NameComponent>` add `--view` when want make without class/controller
 
 if add or edit some npm package, run `npm run build`
+
+common command
+- `php artisan migrate` migrate
+- `php artisan migrate:fresh` drop & migrate 
+- `php artisan make:%` many choice
+- `php artisan tinker` cmd laravel
+-- `App\Models\User::factory(3)->unverified()->create();` create 3 dummy, unverified from UserFactory option, then create
+-- `App\Models\Post::factory(10)->recycle(User::factory(4)->create())->create();` create 10 dummy Post, set key from User id recycle only 4 created dummy from User
