@@ -28,3 +28,5 @@ common command
 - `php artisan tinker` cmd laravel
 -- `App\Models\User::factory(3)->unverified()->create();` create 3 dummy, unverified from UserFactory option, then create
 -- `App\Models\Post::factory(10)->recycle(User::factory(4)->create())->create();` create 10 dummy Post, set key from User id recycle only 4 created dummy from User
+- `php artisan db:seed` seed to db
+- `php artisan migrate:fresh --seed` drop, migrate & seed

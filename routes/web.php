@@ -16,7 +16,7 @@ Route::get('/about', function () {
 Route::get('/blog', function () {
     $data = [
                 'layout' => ['title' => 'BLOG', 'header' => "Blog"],
-                'posts' => Post::all()
+                'posts' => Post::with(['author', 'category'])->get()
             ];
     return view('blog', $data);
 });
@@ -28,17 +28,19 @@ Route::get('/blog/{post:slug}', function (Post $post) {
 });
 
 Route::get('/blog/author/{user:username}', function (User $user) {
+    $posts = $user->posts->load('category', 'author');
     $data = [
                 'layout' => ['title' => 'BLOG', 'header' => 'Blog by '.$user->name],
-                'posts' => $user->posts
+                'posts' => $posts
             ];
     return view('blog', $data);
 });
 
 Route::get('/blog/category/{category:slug}', function (Category $category) {
+    $posts = $category->posts->load('category', 'author');
     $data = [
                 'layout' => ['title' => 'BLOG', 'header' => 'Blog in '.$category->name],
-                'posts' => $category->posts
+                'posts' => $posts
             ];
     return view('blog', $data);
 });
