@@ -28,19 +28,17 @@ Route::get('/blog/{post:slug}', function (Post $post) {
 });
 
 Route::get('/blog/author/{user:username}', function (User $user) {
-    $posts = $user->posts->load('category', 'author');
     $data = [
                 'layout' => ['title' => 'BLOG', 'header' => 'Blog by '.$user->name],
-                'posts' => $posts
+                'posts' => $user->posts
             ];
     return view('blog', $data);
 });
 
 Route::get('/blog/category/{category:slug}', function (Category $category) {
-    $posts = $category->posts->load('category', 'author');
     $data = [
                 'layout' => ['title' => 'BLOG', 'header' => 'Blog in '.$category->name],
-                'posts' => $posts
+                'posts' => $category->posts
             ];
     return view('blog', $data);
 });
