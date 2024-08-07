@@ -15,22 +15,26 @@ class CategorySeeder extends Seeder
     {
         Category::factory()->create([
             'slug' => 'web-programming',
-            'name' => 'Web Programming'
+            'name' => 'Web Programming',
+            'color' => 'blue'
         ]);
 
         Category::factory()->create([
             'slug' => 'desktop-programming',
-            'name' => 'Desktop Programming'
+            'name' => 'Desktop Programming',
+            'color' => 'red'
         ]);
 
         Category::factory()->create([
             'slug' => 'android-programming',
-            'name' => 'Android Programming'
+            'name' => 'Android Programming',
+            'color' => 'green'
         ]);
 
         Category::factory()->create([
             'slug' => 'ios-programming',
-            'name' => 'IOS Programming'
+            'name' => 'IOS Programming',
+            'color' => 'amber'
         ]);
     }
 }
